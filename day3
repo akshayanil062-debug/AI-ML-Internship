@@ -1,8 +1,7 @@
 TASK 1 :
-# 1. Create a list of 10 numbers
+
 numbers = [10, 5, 8, 20, 3, 15, 7, 25, 2, 12]
 
-# 2. Find sum of list elements
 print("Sum:", sum(numbers))
 
 # 3. Find maximum number
