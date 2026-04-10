@@ -1,0 +1,119 @@
+# Task 2: String Practice
+
+text = input("Enter a string: ")
+
+# 1. Reverse string
+print("\n1. Reversed String:")
+print(text[::-1])
+
+# 2. Count number of words
+words = text.split()
+print("\n2. Word Count:", len(words))
+
+# 3. Check palindrome
+print("\n3. Palindrome Check:")
+if text == text[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# 4. Replace words
+old = input("\nEnter word to replace: ")
+new = input("Enter new word: ")
+print("Updated string:", text.replace(old, new))
+
+# 5. Count vowels
+vowels = "aeiouAEIOU"
+count = 0
+
+for ch in text:
+    if ch in vowels:
+        count += 1
+
+print("\n5. Vowel Count:", count)
+
+
+  # Task 3: Nested Data Practice
+
+students = []
+
+# 1. Create list of 5 students
+for i in range(5):
+    name = input("Enter student name: ")
+    marks = int(input("Enter marks: "))
+    students.append({"name": name, "marks": marks})
+
+# 2. Print all students
+print("\nAll Students:")
+for s in students:
+    print(s)
+
+# 3. Find average marks
+total = sum(s["marks"] for s in students)
+avg = total / len(students)
+print("\nAverage Marks:", avg)
+
+# 4. Find highest marks
+top = max(students, key=lambda x: x["marks"])
+print("\nTopper:", top)
+
+# 5. Students with marks > 75
+print("\nStudents with marks > 75:")
+for s in students:
+    if s["marks"] > 75:
+        print(s)
+
+  # Task 4: Module Practice
+
+import math
+import random
+
+# 1. Math module
+num = int(input("Enter a number: "))
+
+print("\nSquare root:", math.sqrt(num))
+print("Power (num^2):", math.pow(num, 2))
+
+# 2. Random module
+print("\nRandom number:", random.randint(1, 100))
+
+choices = ["apple", "banana", "cherry"]
+print("Random choice:", random.choice(choices))
+
+  def greet(name):
+    return "Hello " + name
+
+def add(a, b):
+    return a + b
+
+
+  import mymodule
+
+print(mymodule.greet("Akshay"))
+print("Sum:", mymodule.add(5, 3))
+
+  # Task 6: Logic Challenge
+
+text = input("Enter a string: ")
+nums = list(map(int, input("Enter numbers: ").split()))
+
+# 1. Second highest number
+unique = list(set(nums))
+unique.sort()
+
+if len(unique) >= 2:
+    print("\nSecond highest:", unique[-2])
+else:
+    print("\nNot enough elements")
+
+# 2. Frequency of characters
+freq = {}
+
+for ch in text:
+    freq[ch] = freq.get(ch, 0) + 1
+
+print("\nCharacter frequency:", freq)
+
+# 3. Remove duplicates from list
+no_dup = list(set(nums))
+print("\nList without duplicates:", no_dup)
